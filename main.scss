@@ -61,25 +61,30 @@
 		margin-right: -2px;
 		background-color: $background-pink;
 		position: relative;
+
+        &--third{
+            display: none;
+        }
+        &--second{
+            display: none;
+        }
 	}
 
 	&__info {
-		position: absolute;
-		display: block;
-		font-size: 18px;
-		line-height: 24px;
-		font-weight: 700;
-		color: $color-secondary;
-		width: 197px;
-		bottom: 50px;
-		left: 75px;
+		@include hero__info;
+		top: 70%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 20px;
+		text-align: center;
 	}
 
 	&__icon-arrow {
 		position: absolute;
-		bottom: 56px;
-		left: 312px;
-		transition: transform 0.3s ease-in-out;
+		top: 75%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 0.3s ease-in-out;
 	}
 	&__icon-arrow:hover {
 		transform: scale(1.16);
@@ -189,6 +194,7 @@
 		transition: 0.4s;
 	}
 }
+
 .hamburger.is-active {
 	width: 20px;
 	&:before {
@@ -202,14 +208,12 @@
 	}
 }
 
-
-  
-  
-  
-
-
 .header-h1 {
 	@include h1-style;
+    width: 252px;
+    font-size: 48px;
+    top: 210px;
+    text-align: center;
 }
 
 .button {
@@ -230,6 +234,46 @@
 		text-decoration: none;
 		color: #000;
 	}
+}
+
+@media (min-width: 800px){
+    .hero{
+	
+		&__column{
+			&--second{
+				display: block;
+			}
+		}
+
+		&__info{
+			@include hero__info;
+		}
+
+		&__icon-arrow {
+			position: absolute;
+			bottom: 56px;
+			left: 250px;
+			transition: transform 0.3s ease-in-out;
+		}
+	}
+
+    .header-h1 {
+        @include h1-style;
+        text-align: left;
+    }
+}
+
+@media (min-width: 900px){
+    .hero{
+
+        &__info{
+            left: 75px;
+        }
+
+        &__icon-arrow{
+            left: 312px;
+        }
+    }
 }
 
 @media (min-width: 1000px) {
@@ -256,9 +300,26 @@
 }
 
 @media (min-width: 1270px) {
-	.hero__nav {
-		margin-left: 200px;
-	}
+
+    .hero{
+    
+        &__header {
+            display: flex;
+            padding: 30px 35px;
+    
+                &--navbar {
+                    display: none;
+                }
+            }
+
+            &__nav {
+                margin-left: 200px;
+            }
+    
+            &__column--third{
+                display: block;
+            }
+        }
 }
 
 @media (min-width: 1315px) {

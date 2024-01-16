@@ -76,6 +76,12 @@ a {
   background-color: #f5cdd5;
   position: relative;
 }
+.hero__column--third {
+  display: none;
+}
+.hero__column--second {
+  display: none;
+}
 .hero__info {
   position: absolute;
   display: block;
@@ -85,13 +91,19 @@ a {
   color: #944385;
   width: 197px;
   bottom: 50px;
-  left: 75px;
+  left: 30px;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  text-align: center;
 }
 .hero__icon-arrow {
   position: absolute;
-  bottom: 56px;
-  left: 312px;
-  transition: transform 0.3s ease-in-out;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out;
 }
 .hero__icon-arrow:hover {
   transform: scale(1.16);
@@ -215,11 +227,16 @@ a {
   font-size: 65px;
   line-height: 65px;
   font-weight: 700;
+  text-align: right;
   color: #fff;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  width: 252px;
+  font-size: 48px;
+  top: 210px;
+  text-align: center;
 }
 
 .button {
@@ -255,6 +272,49 @@ a {
   color: #000;
 }
 
+@media (min-width: 800px) {
+  .hero__column--second {
+    display: block;
+  }
+  .hero__info {
+    position: absolute;
+    display: block;
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    color: #944385;
+    width: 197px;
+    bottom: 50px;
+    left: 30px;
+  }
+  .hero__icon-arrow {
+    position: absolute;
+    bottom: 56px;
+    left: 250px;
+    transition: transform 0.3s ease-in-out;
+  }
+  .header-h1 {
+    width: 312px;
+    font-size: 65px;
+    line-height: 65px;
+    font-weight: 700;
+    text-align: right;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+  }
+}
+@media (min-width: 900px) {
+  .hero__info {
+    left: 75px;
+  }
+  .hero__icon-arrow {
+    left: 312px;
+  }
+}
 @media (min-width: 1000px) {
   .hero__header {
     display: flex;
@@ -275,8 +335,18 @@ a {
   }
 }
 @media (min-width: 1270px) {
+  .hero__header {
+    display: flex;
+    padding: 30px 35px;
+  }
+  .hero__header--navbar {
+    display: none;
+  }
   .hero__nav {
     margin-left: 200px;
+  }
+  .hero__column--third {
+    display: block;
   }
 }
 @media (min-width: 1315px) {
