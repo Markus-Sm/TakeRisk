@@ -13,7 +13,7 @@
         <div class="hero">
 
             <header class="hero__header">
-                <a href="./index.html">
+                <a href="./">
                     <img src="./assets/icons/logo.svg" alt="Logo firmy">
                 </a>
                 <nav>
@@ -26,13 +26,37 @@
                     </ul>
                 </nav>
                 <div>
-                    <button class="button button--employer">
-                        <a class="button__link" href="#">Pracodawca</a>
-                    </button>
-                    <button class="button button--employee">
-                        <a class="button__link" href="#">Pracownik</a>
-                    </button>
+                    <a class="button__link" href="#">
+                        <button class="button button--employer">
+                        Pracodawca
+                        </button></a>
+                    <a class="button__link" href="#">
+                        <button class="button button--employee">
+                        Pracownik
+                        </button>
+                    </a>
                 </div>
+            </header>
+
+            <header class="hero__header--navbar">
+
+                <div class="hero__menu">
+                    <a href="./">
+                        <img src="./assets/icons/logo.svg" alt="Logo firmy">
+                    </a>
+    
+                    <div class="hamburger">
+                        <div class="bar"></div>
+                    </div>
+                </div>
+
+                <nav class="hero__navbar mobile-nav">
+                    <a href="#" class="hero__nav-link">Oferty pracy</a>  
+                    <a href="#" class="hero__nav-link">Poznaj JWG</a>
+                    <a href="#" class="hero__nav-link">Opinie</a>
+                    <a href="#" class="hero__nav-link">FAQ</a>
+                    <a href="#" class="hero__nav-link">Kontakt</a>
+                </nav>
             </header>
 
             <div class="hero__column">
@@ -42,7 +66,7 @@
                     <a href="#">
                         <img class="hero__icon-arrow" 
                         src="./assets/icons/slide-down.svg" 
-                        alt="ikonka strzałki kierującej do sekcji niej">
+                        alt="ikonka strzałki kierującej do sekcji niżej">
                     </a>
                 </div>
                 <!-- Treść trzeciej kolumny -->
@@ -71,5 +95,6 @@
     </section>
       
     
+    <script src="./assets/js/hamburger.js"></script>
 </body>
 </html>
