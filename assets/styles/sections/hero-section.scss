@@ -1,37 +1,3 @@
-@import './assets/styles/utils/mixins.scss';
-
-* {
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
-	text-decoration: none;
-}
-li {
-	list-style: none;
-}
-a {
-	text-decoration: none;
-}
-
-.no-scroll {
-    overflow: hidden;
- }
-
-$color-primary: #fff;
-$color-secondary: #944385;
-$background-pink: #f5cdd5;
-$background-blue: #26bbe1;
-
-body {
-	font-family: 'arboria', sans-serif;
-	font-weight: 400;
-	font-style: normal;
-}
-
-button {
-	@include button-reset;
-}
-
 .hero {
 	position: relative;
 	height: 700px;
@@ -55,16 +21,8 @@ button {
 			z-index: 2;
 		}
 	}
-	/* mobile nav */
 
-	&__mobile-menu {
-		position: relative;
-		display: flex;
-		justify-content: space-between;
-		z-index: 5;
-	}
-
-	// desktop nav
+	/* desktop nav */
 	&__nav {
 		display: flex;
 		margin-left: 0px;
@@ -81,6 +39,16 @@ button {
 			color: $color-primary;
 		}
 	}
+	/* mobile nav */
+
+	&__mobile-menu {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		z-index: 5;
+	}
+
+
 	&__column {
 		flex: 1;
 		flex-basis: 0;
@@ -159,7 +127,7 @@ button {
 	background-color: $background-blue;
 	padding-top: 120px;
 	z-index: 3;
-    transition: left .4s ease-in-out;
+	transition: left 0.4s ease-in-out;
 
 	a {
 		display: block;
@@ -168,8 +136,8 @@ button {
 	}
 }
 
-.mobile-nav.is-active{
-    left:0;
+.mobile-nav.is-active {
+	left: 0;
 }
 
 .hamburger {
@@ -196,16 +164,16 @@ button {
 	margin: 6px 0px;
 	transition: 0.4s;
 }
-.hamburger.is-active{
-    width: 20px;
+.hamburger.is-active {
+	width: 20px;
 }
 .hamburger.is-active:before {
-    transform: rotate(-45deg) translate(-3px, 9px);
-  }
-  
-  .hamburger.is-active:after {
-    transform: rotate(45deg) translate(-3px, -9px);
-  }
+	transform: rotate(-45deg) translate(-3px, 9px);
+}
+
+.hamburger.is-active:after {
+	transform: rotate(45deg) translate(-3px, -9px);
+}
 .hamburger.is-active .bar {
 	opacity: 0;
 }
@@ -215,6 +183,7 @@ button {
 }
 
 .button {
+	@include button-reset;
 	@include button-style;
 
 	&--employer:hover {
@@ -233,20 +202,20 @@ button {
 	}
 }
 
-@media (min-width: 1000px){
-    .hero__header{
-        display: flex;
-        padding: 30px 35px;
+@media (min-width: 1000px) {
+	.hero__header {
+		display: flex;
+		padding: 30px 35px;
 
-        &--navbar {
+		&--navbar {
 			display: none;
 		}
-    }
+	}
 }
 
 @media (min-width: 1100px) {
 	.hero__header {
-        padding: 30px 75px;
+		padding: 30px 75px;
 	}
 }
 
