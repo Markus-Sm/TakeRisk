@@ -35,14 +35,3 @@
 	transform: translate(-50%, -50%);
 }
 
-@mixin hero__info{
-	position: absolute;
-	display: block;
-	font-size: 18px;
-	line-height: 24px;
-	font-weight: 700;
-	color: $color-secondary;
-	width: 197px;
-	bottom: 50px;
-	left: 30px;
-}
