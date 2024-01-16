@@ -22,14 +22,14 @@
 	transition: background 0.3s ease-in-out;
 }
 
-@mixin h1-style{
-    width: 312px;
-    font-size: 65px;
-    line-height: 65px;
-    font-weight: 700;
-    color: $color-primary;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+@mixin h1-style {
+	width: 312px;
+	font-size: 65px;
+	line-height: 65px;
+	font-weight: 700;
+	color: $color-primary;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 }
