@@ -23,7 +23,6 @@ a {
   overflow: hidden;
 }
 
-/* @import './assets/styles/sections/hero-section.scss'; */
 .hero {
   height: 700px;
   display: flex;
