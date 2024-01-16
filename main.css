@@ -5,6 +5,12 @@
   text-decoration: none;
 }
 
+body {
+  font-family: "arboria", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 li {
   list-style: none;
 }
@@ -17,28 +23,11 @@ a {
   overflow: hidden;
 }
 
-body {
-  font-family: "arboria", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-button {
-  margin: 0;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
-  line-height: inherit;
-  color: inherit;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-
 .hero {
   position: relative;
   height: 700px;
   display: flex;
+  /* desktop nav */
   /* mobile nav */
 }
 .hero__header {
@@ -58,12 +47,6 @@ button {
   padding: 16px 24px;
   z-index: 2;
 }
-.hero__mobile-menu {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  z-index: 5;
-}
 .hero__nav {
   display: flex;
   margin-left: 0px;
@@ -77,6 +60,12 @@ button {
 }
 .hero__nav li a:hover {
   color: #fff;
+}
+.hero__mobile-menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
 }
 .hero__column {
   flex: 1;
@@ -216,6 +205,15 @@ button {
 }
 
 .button {
+  margin: 0;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
   background-color: #fff;
   width: 142px;
   height: 42px;
@@ -267,4 +265,4 @@ button {
   .hero__nav {
     margin-left: 250px;
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=main.css.map */
