@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
+
 body {
   font-family: "arboria", sans-serif;
   font-weight: 400;
@@ -35,6 +39,7 @@ button {
   position: relative;
   height: 700px;
   display: flex;
+  /* mobile nav */
 }
 .hero__header {
   width: 100%;
@@ -42,7 +47,7 @@ button {
   display: none;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 75px;
+  padding: 30px 35px;
   top: 0;
   left: 0;
   z-index: 1;
@@ -52,6 +57,12 @@ button {
   position: absolute;
   padding: 16px 24px;
   z-index: 2;
+}
+.hero__mobile-menu {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
 }
 .hero__nav {
   display: flex;
@@ -131,12 +142,14 @@ button {
 .mobile-nav {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 100%;
   width: 100%;
   min-height: 100vh;
   display: block;
+  background-color: #26bbe1;
   padding-top: 120px;
-  z-index: 5;
+  z-index: 3;
+  transition: left 0.4s ease-in-out;
 }
 .mobile-nav a {
   display: block;
@@ -144,11 +157,15 @@ button {
   margin-bottom: 16px;
 }
 
+.mobile-nav.is-active {
+  left: 0;
+}
+
 .hamburger {
   position: relative;
   display: block;
-  width: 35px;
-  height: 35px;
+  width: 55px;
+  height: 32px;
   cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -158,22 +175,28 @@ button {
   border: none;
 }
 
-.hamburger .bar, .hamburger:after, .hamburger:before {
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
   content: "";
   display: block;
   width: 100%;
-  height: 5px;
+  height: 2px;
   background-color: #fff;
   margin: 6px 0px;
   transition: 0.4s;
 }
 
+.hamburger.is-active {
+  width: 20px;
+}
+
 .hamburger.is-active:before {
-  transform: rotate(-45deg) translate(-8px, 6px);
+  transform: rotate(-45deg) translate(-3px, 9px);
 }
 
 .hamburger.is-active:after {
-  transform: rotate(45deg) translate(-9px, -8px);
+  transform: rotate(45deg) translate(-3px, -9px);
 }
 
 .hamburger.is-active .bar {
@@ -216,12 +239,18 @@ button {
   color: #000;
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
   .hero__header {
     display: flex;
+    padding: 30px 35px;
   }
   .hero__header--navbar {
     display: none;
+  }
+}
+@media (min-width: 1100px) {
+  .hero__header {
+    padding: 30px 75px;
   }
 }
 @media (min-width: 1180px) {

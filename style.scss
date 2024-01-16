@@ -4,18 +4,24 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-    text-decoration: none;
+	text-decoration: none;
 }
-li{
-    list-style: none;
+li {
+	list-style: none;
 }
-a{
-    text-decoration: none;
+a {
+	text-decoration: none;
 }
+
+.no-scroll {
+    overflow: hidden;
+ }
 
 $color-primary: #fff;
 $color-secondary: #944385;
-$color-background: #f5cdd5;
+$background-pink: #f5cdd5;
+$background-blue: #26bbe1;
+
 body {
 	font-family: 'arboria', sans-serif;
 	font-weight: 400;
@@ -37,35 +43,28 @@ button {
 		display: none;
 		justify-content: space-between;
 		align-items: center;
-		padding: 30px 75px;
+		padding: 30px 35px;
 		top: 0;
 		left: 0;
 		z-index: 1;
 
-        &--navbar{
-            width: 100%;
-            position: absolute;
-            padding: 16px 24px;
-            z-index: 2;
-        }
+		&--navbar {
+			width: 100%;
+			position: absolute;
+			padding: 16px 24px;
+			z-index: 2;
+		}
 	}
-    // mobile nav
-    // &__navbar{
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-    // }
+	/* mobile nav */
 
-    // &__nav-menu{
-    //     display: flex;
-    //     justify-content: space-between;
-    //     align-items: center;
-    //     gap: 60px;
-    // }
+	&__mobile-menu {
+		position: relative;
+		display: flex;
+		justify-content: space-between;
+		z-index: 5;
+	}
 
-  
-
-    // desktop nav
+	// desktop nav
 	&__nav {
 		display: flex;
 		margin-left: 0px;
@@ -86,7 +85,7 @@ button {
 		flex: 1;
 		flex-basis: 0;
 		margin-right: -2px;
-		background-color: $color-background;
+		background-color: $background-pink;
 		position: relative;
 	}
 
@@ -150,55 +149,65 @@ button {
 	}
 }
 
-.mobile-nav{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 100vh;
-    display: block;
-    // background-color: #26BBE1;
-    padding-top: 120px;
-    z-index: 5;
+.mobile-nav {
+	position: fixed;
+	top: 0;
+	left: 100%;
+	width: 100%;
+	min-height: 100vh;
+	display: block;
+	background-color: $background-blue;
+	padding-top: 120px;
+	z-index: 3;
+    transition: left .4s ease-in-out;
 
-    a{
-        display: block;
-        text-align: center;
-        margin-bottom: 16px;
-    }
+	a {
+		display: block;
+		text-align: center;
+		margin-bottom: 16px;
+	}
 }
 
-.hamburger{
-    position: relative;
-    display: block;
-    width: 35px;
-    height: 35px;
-    cursor: pointer;
-
-    appearance: none;
-    background: none;
-    outline: none;
-    border: none;
+.mobile-nav.is-active{
+    left:0;
 }
 
-.hamburger .bar, .hamburger:after, .hamburger:before{
-    content: '';
-    display: block;
-    width: 100%;
-    height: 5px;
-    background-color: #fff;
-    margin: 6px 0px;
-    transition: 0.4s;
+.hamburger {
+	position: relative;
+	display: block;
+	width: 55px;
+	height: 32px;
+	cursor: pointer;
+
+	appearance: none;
+	background: none;
+	outline: none;
+	border: none;
 }
 
-.hamburger.is-active:before{
-    transform: rotate(-45deg) translate(-8px, 6px);
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: #fff;
+	margin: 6px 0px;
+	transition: 0.4s;
 }
-.hamburger.is-active:after{
-    transform: rotate(45deg) translate(-9px, -8px);
+.hamburger.is-active{
+    width: 20px;
 }
-.hamburger.is-active .bar{
-    opacity: 0;
+.hamburger.is-active:before {
+    transform: rotate(-45deg) translate(-3px, 9px);
+  }
+  
+  .hamburger.is-active:after {
+    transform: rotate(45deg) translate(-3px, -9px);
+  }
+.hamburger.is-active .bar {
+	opacity: 0;
 }
 
 .header-h1 {
@@ -214,7 +223,7 @@ button {
 	}
 
 	&--employee:hover {
-		background-color: $color-background;
+		background-color: $background-pink;
 		color: $color-secondary;
 	}
 
@@ -224,13 +233,20 @@ button {
 	}
 }
 
+@media (min-width: 1000px){
+    .hero__header{
+        display: flex;
+        padding: 30px 35px;
+
+        &--navbar {
+			display: none;
+		}
+    }
+}
+
 @media (min-width: 1100px) {
 	.hero__header {
-		display: flex;
-
-        &--navbar{
-            display: none;
-        }
+        padding: 30px 75px;
 	}
 }
 
