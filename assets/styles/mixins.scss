@@ -11,7 +11,7 @@
 }
 
 @mixin button-style {
-	background-color: $color-primary;
+	background-color: $background-color_1;
 	width: 142px;
 	height: 42px;
 	border-radius: 84px;
@@ -24,12 +24,9 @@
 
 @mixin h1-style {
 	width: 312px;
-	font-size: 65px;
+	font-size: 48px;
 	line-height: 65px;
 	font-weight: 700;
-	color: $color-primary;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
+	color: $background-color_1;
 }
+
