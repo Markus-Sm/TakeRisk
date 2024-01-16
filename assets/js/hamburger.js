@@ -1,9 +1,29 @@
-const menu_btn = document.querySelector('.hamburger');
-const mobile_menu = document.querySelector('.mobile-nav');
-const body = document.querySelector('body');
+class MobileMenu {
+    constructor() {
+        this.mobileNavLinks = document.querySelectorAll('.mobile-nav__link');
+        this.menuBtn = document.querySelector('.hamburger');
+        this.mobileMenu = document.querySelector('.mobile-nav');
+        this.body = document.querySelector('body');
 
-menu_btn.addEventListener('click', function() {
-    menu_btn.classList.toggle('is-active');
-    mobile_menu.classList.toggle('is-active');
-    body.classList.toggle('no-scroll');
-})
+        this.menuBtn.addEventListener('click', () => this.toggleMenu());
+        this.mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => this.closeMenu());
+        });
+    }
+
+    toggleMenu() {
+        this.menuBtn.classList.toggle('is-active');
+        this.mobileMenu.classList.toggle('is-active');
+        this.body.classList.toggle('no-scroll');
+    }
+
+    closeMenu() {
+        this.mobileMenu.classList.remove('is-active');
+        this.menuBtn.classList.remove('is-active');
+        this.body.classList.remove('no-scroll');
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenu = new MobileMenu();
+});

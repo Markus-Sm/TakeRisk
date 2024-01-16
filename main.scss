@@ -4,7 +4,6 @@
 /* @import './assets/styles/sections/hero-section.scss'; */
 
 .hero {
-	position: relative;
 	height: 700px;
 	display: flex;
 
@@ -224,10 +223,10 @@
 .hamburger.is-active {
 	width: 20px;
 	&:before {
-		transform: rotate(-45deg) translate(-3px, 9px);
+		transform: rotate(-45deg) translate(-2px, 9px);
 	}
 	&:after {
-		transform: rotate(45deg) translate(-3px, -9px);
+		transform: rotate(45deg) translate(-2px, -10px);
 	}
 	.hamburger__bar {
 		opacity: 0;
