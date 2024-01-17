@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="https://use.typekit.net/esg5xus.css">
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
 
     <section>
@@ -14,7 +16,7 @@
 
             <header class="hero__header">
                 <a href="./">
-                    <img src="./assets/icons/logo.svg" alt="Logo firmy">
+                    <img class="hero__logo" src="./assets/image/logo.png" alt="Logo firmy">
                 </a>
                 <nav>
                     <ul class="hero__nav">
@@ -43,16 +45,16 @@
 
                 <div class="hero__mobile-menu">
                     <a href="./">
-                        <img src="./assets/icons/logo.svg" alt="Logo firmy">
+                        <img class="hero__logo" src="./assets/image/logo.png" alt="Logo firmy">
                     </a>
-    
+
                     <div class="hamburger">
                         <div class="hamburger__bar"></div>
                     </div>
                 </div>
 
                 <nav class="mobile-nav">
-                    <a href="#" class="mobile-nav__link">Oferty pracy</a>  
+                    <a href="#" class="mobile-nav__link">Oferty pracy</a>
                     <a href="#" class="mobile-nav__link">Poznaj JWG</a>
                     <a href="#" class="mobile-nav__link">Opinie</a>
                     <a href="#" class="mobile-nav__link">FAQ</a>
@@ -66,34 +68,29 @@
                     <div class="hero__inner-content">
                         <p class="hero__info">Find your employee. Find your employer.</p>
                         <a href="#" class="hero__icon-link">
-                            <img class="hero__icon-arrow" 
-                            src="./assets/icons/slide-down.svg" 
-                            alt="ikonka strzałki kierującej do sekcji niżej">
+                            <img class="hero__icon-arrow" src="./assets/icons/slide-down.svg"
+                                alt="ikonka strzałki kierującej do sekcji niżej">
                         </a>
                     </div>
                 </div>
             </div>
 
             <div class="hero__column hero__column--second">
-              <img class="hero__image" src="./assets/image/green-second.png" alt="Zadowolony Pan">
+                <img class="hero__image" src="./assets/image/green-second.png"
+                    alt="Zadowolony Pan, wskazujący palcem dobre oferty pracy.">
             </div>
 
             <div class="hero__column hero__column--third">
-                <img class="hero__image" src="./assets/image/yellow-third.png" alt="Zadowolona Pani">
+                <img class="hero__image" src="./assets/image/yellow-third.png" alt="Zadowolona Pani ofertami pracy.">
 
                 <div class="hero__media">
                     <a class="hero__socialmedia-link" href="https://facebook.com" target="_blank">
-                        <img 
-                        class="hero__socialmedia-icon"
-                        src="./assets/icons/fb.svg" 
-                        alt="Media społecznościowe facebook">
+                        <img class="hero__socialmedia-icon" src="./assets/icons/fb.svg"
+                            alt="Media społecznościowe facebook">
                     </a>
-                    <a class="hero__socialmedia-link" href="https://instagram.com" 
-                    target="_blank">
-                        <img 
-                        class="hero__socialmedia-icon"
-                        src="./assets/icons/inst.svg" 
-                        alt="Media społecznościowe instagram">
+                    <a class="hero__socialmedia-link" href="https://instagram.com" target="_blank">
+                        <img class="hero__socialmedia-icon" src="./assets/icons/inst.svg"
+                            alt="Media społecznościowe instagram">
                     </a>
                 </div>
             </div>
@@ -101,10 +98,28 @@
     </section>
 
     <main>
-        <section>
+        <section class="job-offers">
             <div class="container">
-                <h2>Oferty pracy</h2>
-                <!-- Kafelki z ofertami pracy -->
+
+                <div class="job-offers__top">
+                    <div class="job-offers__left">
+                        <header>
+                            <h2 class="header-h2">Oferty pracy.</h2>
+                        </header>
+                        <p class="job-offers__description">Znajdź idealne warunki dla siebie.</p>
+                    </div>
+                    <div class="job-offers__right">
+                        <div class="job-offers__right--event">
+                            <div class="job-offers__arrow">
+                                <div class="job-offers__line"></div>
+                                <img src="./assets/icons/arrow.svg" class="job-offers__icon" 
+                                alt="ikonka strzałki">
+                            </div>
+                            <a href="#" class="job-offers__link">Wszystkie oferty</a>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -115,8 +130,10 @@
             </div>
         </section>
     </main>
-      
-    
+
+
     <script src="./assets/js/hamburger.js"></script>
+    <script src="./assets/js/offer-section.js"></script>
 </body>
+
 </html>

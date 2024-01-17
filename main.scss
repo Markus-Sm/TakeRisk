@@ -2,3 +2,89 @@
 @import './assets/styles/reset.scss';
 @import './assets/styles/mixins.scss';
 @import './assets/styles/sections/hero-section.scss';
+
+/* 
+	na event najechania na job-offers__right dodać klasy:
+
+
+*/
+
+.container{
+	padding: 100px 75px;
+	width: 100%;
+	/* max-width: 1500px; */
+}
+
+.job-offers{
+	display: flex;
+	justify-content: center;
+
+	&__top{
+		display: flex;
+		justify-content: space-around;
+	}
+
+	&__description{
+		font-size: $font-size-large;
+		font-weight: 700;
+		line-height: 30px;
+		margin-top: 40px;
+	}
+
+	&__right{
+		display: flex;
+		align-items: end;
+
+		&--event{
+			display: flex;
+			cursor: pointer;
+		}
+	}
+
+	&__arrow{
+		position: relative;
+		align-self: flex-start;
+		margin-top: -20px;
+		width: 60px;
+		display: flex;
+		justify-content: center;
+	}
+
+	&__icon{
+		filter: brightness(0);
+		width: 29px;
+		height: 29px;
+		position: relative;
+		top: 0;
+		transition: top .1s ease-in-out;
+	}
+
+	&__line {
+		height: 20px;
+		background-color: black;
+		transition: top .2s ease-in-out;
+		width: 4px;
+		top: 0;
+		position: absolute;
+	}
+
+	&__link{
+		font-size: $font-size-large;
+		font-weight: 700;
+		line-height: 30px;
+		display: block;
+		transition: color .3s ease-in-out;
+		width: 140px;
+	}
+	&__link:visited{
+		color: black;
+	}
+
+}
+
+.header-h2{
+	font-weight: 700;
+	font-size: 64px;
+	line-height: 60px;
+}
+

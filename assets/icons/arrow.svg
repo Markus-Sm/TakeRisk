@@ -1,5 +1,5 @@
-<svg class="icon-arrow" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="28.8335" y="18.2787" width="18.0654" height="4.01454" transform="rotate(135 28.8335 18.2787)" fill="#F5CDD5"/>
-<rect x="16.0396" y="31.0727" width="18.0654" height="4.01454" transform="rotate(-135 16.0396 31.0727)" fill="#F5CDD5"/>
-<rect x="13.9927" y="29.1055" width="27.0982" height="4.01454" transform="rotate(-90 13.9927 29.1055)" fill="#F5CDD5"/>
+<svg class='arrow-icon' width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="37.5143" y="24.2662" width="23.8719" height="5.30487" transform="rotate(135 37.5143 24.2662)" fill="#944386"/>
+<rect x="20.6084" y="41.1724" width="23.8719" height="5.30487" transform="rotate(-135 20.6084 41.1724)" fill="#944386"/>
+<rect x="17.9033" y="38.5729" width="35.8079" height="5.30487" transform="rotate(-90 17.9033 38.5729)" fill="#944386"/>
 </svg>
