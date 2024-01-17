@@ -10,3 +10,13 @@
 </clipPath>
 </defs>
 </svg>
+
+<svg xmlns="http://www.w3.org/2000/svg" width="42" height="42" viewBox="0 0 42 42" fill="none">
+  <defs>
+    <rect id="blackRect" width="23.8719" height="5.30487" fill="black" />
+  </defs>
+
+  <use xlink:href="#blackRect" x="37.5143" y="24.2662" transform="rotate(135 37.5143 24.2662)" />
+  <use xlink:href="#blackRect" x="20.6084" y="41.1724" transform="rotate(-135 20.6084 41.1724)" />
+  <use xlink:href="#blackRect" x="17.9033" y="38.5729" transform="rotate(-90 17.9033 38.5729)" />
+</svg>

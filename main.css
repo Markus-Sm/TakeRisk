@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
   margin: 0;
@@ -46,6 +47,10 @@ a {
   position: absolute;
   padding: 16px 24px;
   z-index: 2;
+}
+.hero__logo {
+  width: 133px;
+  height: 32px;
 }
 .hero__nav {
   display: flex;
@@ -329,4 +334,78 @@ a {
   .hero__nav {
     margin-left: 250px;
   }
+}
+/* 
+	na event najechania na job-offers__right dodać klasy:
+
+
+*/
+.container {
+  padding: 100px 75px;
+  width: 100%;
+  /* max-width: 1500px; */
+}
+
+.job-offers {
+  display: flex;
+  justify-content: center;
+}
+.job-offers__top {
+  display: flex;
+  justify-content: space-around;
+}
+.job-offers__description {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  margin-top: 40px;
+}
+.job-offers__right {
+  display: flex;
+  align-items: end;
+}
+.job-offers__right--event {
+  display: flex;
+  cursor: pointer;
+}
+.job-offers__arrow {
+  position: relative;
+  align-self: flex-start;
+  margin-top: -20px;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+}
+.job-offers__icon {
+  filter: brightness(0);
+  width: 29px;
+  height: 29px;
+  position: relative;
+  top: 0;
+  transition: top 0.1s ease-in-out;
+}
+.job-offers__line {
+  height: 20px;
+  background-color: black;
+  transition: top 0.2s ease-in-out;
+  width: 4px;
+  top: 0;
+  position: absolute;
+}
+.job-offers__link {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 30px;
+  display: block;
+  transition: color 0.3s ease-in-out;
+  width: 140px;
+}
+.job-offers__link:visited {
+  color: black;
+}
+
+.header-h2 {
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 60px;
 }/*# sourceMappingURL=main.css.map */
