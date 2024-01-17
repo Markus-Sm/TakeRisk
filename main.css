@@ -137,17 +137,17 @@ a {
   position: relative;
   margin-right: 17px;
 }
-.hero__socialmedia-link img {
+.hero__socialmedia-icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   filter: brightness(0) invert(1);
 }
-.hero__socialmedia-link img:hover {
+.hero__socialmedia-icon:hover {
   filter: none;
 }
-.hero__socialmedia-link:hover img {
+.hero__socialmedia-icon:hover img {
   filter: none;
 }
 .hero__image {
