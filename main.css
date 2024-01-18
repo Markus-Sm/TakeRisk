@@ -1,3 +1,12 @@
+/*
+// $font-size-smoll-S: 12px;
+// $font-size-small: 14px;
+// $font-size-medium: 20px;
+// $font-size-mediumM: 22px;
+
+// $font-size-medium: 20px;
+// $font-size-mediumM: 22px;
+*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -421,6 +430,81 @@ a {
   color: black;
 }
 
+.job-offers__list {
+  margin: 0 auto;
+  margin-top: 130px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1205px;
+  gap: 28px;
+}
+
+.job-offer {
+  max-width: 383px;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 42px;
+  border: 1px solid #D1E85A;
+  transition: 0.3s ease-in-out;
+}
+.job-offer__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.job-offer__title {
+  font-size: 26px;
+  font-weight: 700;
+}
+.job-offer__rate {
+  font-size: 46px;
+  line-height: 46px;
+  font-weight: 700;
+  text-align: right;
+  color: #007895;
+}
+.job-offer__company-location {
+  font-size: 14px;
+  line-height: 18px;
+}
+.job-offer__description-title {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
+.job-offer__description-text {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: justify;
+}
+.job-offer__bottom {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+}
+.job-offer__link {
+  display: flex;
+  justify-content: end;
+  margin-top: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: right;
+  text-transform: uppercase;
+}
+.job-offer__icon {
+  margin-left: 13px;
+}
+
+.job-offer:hover {
+  background-color: #D1E85A;
+  border-radius: 50px;
+}
+
 /* MEDIA */
 @media (min-width: 568px) {
   .job-offers__top {
@@ -447,15 +531,17 @@ a {
     display: flex;
   }
 }
+@media (min-width: 450px) {
+  .job-offer__top {
+    margin-bottom: 0;
+  }
+}
 @media (min-width: 650px) {
   .container {
     padding: 100px 50px;
   }
 }
 @media (min-width: 768px) {
-  .container {
-    padding: 100px 75px;
-  }
   .job-offers__h2 {
     font-size: 64px;
     line-height: 60px;
@@ -472,5 +558,21 @@ a {
   }
   .job-offers__description {
     width: 100%;
+  }
+}
+@media (min-width: 1000px) {
+  .container {
+    padding: 100px 75px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 100px 25px;
+  }
+}
+@media (min-width: 1300px) {
+  .container {
+    max-width: 1205px;
+    padding: 100px 0px;
   }
 }/*# sourceMappingURL=main.css.map */

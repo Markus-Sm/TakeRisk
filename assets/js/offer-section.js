@@ -35,6 +35,7 @@ class JobOffersAnimation {
 	}
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
 	const jobOffersAnimation = new JobOffersAnimation()
 })
