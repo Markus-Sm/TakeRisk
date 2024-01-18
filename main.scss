@@ -6,7 +6,6 @@
 .container {
 	padding: 100px 35px;
 	width: 100%;
-	/* max-width: 1500px; */
 }
 
 .job-offers {
@@ -84,6 +83,12 @@
 		transition: color 0.3s ease-in-out;
 		width: 140px;
 		margin: 0 auto;
+	}
+	&__link:hover {
+		color: black;
+	}
+	&__link:active {
+		color: $color-secondary;
 	}
 	&__link:visited {
 		color: black;
