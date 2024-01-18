@@ -30,3 +30,8 @@
 	color: $background-color_1;
 }
 
+@mixin h2-style{
+	font-weight: 700;
+	font-size: 44px;
+	line-height: 40px;
+}
