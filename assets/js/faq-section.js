@@ -1,27 +1,31 @@
-function togglePricingTable() {
-    const switcher1 = document.querySelector(".price__switcher-1");
-    const switcher2 = document.querySelector(".price__switcher-2");
-    const table1 = document.querySelector("#table__pricing-1");
-    const table2 = document.querySelector("#table__pricing-2");
-  
-    if (switcher1 && switcher2 && table1 && table2) {
-        
-      switcher1.addEventListener("click", () => {
-        table2.style.display = "none";
-        switcher2.classList.remove("active__switcher");
-  
-        table1.style.display = "flex";
-        switcher1.classList.add("active__switcher");
-      });
-  
-      switcher2.addEventListener("click", () => {
-        table1.style.display = "none";
-        switcher1.classList.remove("active__switcher");
-  
-        table2.style.display = "flex";
-        switcher2.classList.add("active__switcher");
-      });
+function toggleFAQContent() {
+    const faqSwitchers = document.querySelectorAll('.faq-switcher');
+    const faqContents = document.querySelectorAll('.faq-content');
+
+    if (faqSwitchers.length && faqContents.length) {
+        faqSwitchers.forEach((switcher) => {
+            switcher.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                const targetId = switcher.getAttribute('data-target');
+
+                faqContents.forEach((content) => {
+                    content.classList.remove('active-content');
+                });
+
+                const targetContent = document.getElementById(targetId);
+                if (targetContent) {
+                    targetContent.classList.add('active-content');
+                }
+
+                faqSwitchers.forEach((s) => {
+                    s.classList.remove('active-switcher');
+                });
+
+                switcher.classList.add('active-switcher');
+            });
+        });
     }
-  }
-  
-  togglePricingTable();
+}
+
+toggleFAQContent();

@@ -7,11 +7,64 @@
 .faq{
 	background-color: $background-blue;
 
+	padding-bottom: 400px;
+
 	&__h2{
 		@include h2-style;
 		color: $background-color_1;
 	}
+
+	&__switchers{
+		display: flex;
+		justify-content: space-around;
+		margin: 0 auto;
+		margin-top: 70px;
+		max-width: 670px;
+
+
+		.faq-switcher {
+			display: flex;
+			justify-content: center;
+			cursor: pointer;
+			font-size: $font-size-large;
+			font-weight: 700;
+			line-height: 24px;
+			width: 195px;
+
+			&--employer{
+				color: $hover-color;
+			}
+	
+			&.active-switcher {
+				// Styl dla aktywnego przełącznika
+				font-weight: bold;
+				color: $background-color_1;
+				filter: brightness(0) invert(1);
+				transition: .2s ease-in-out;
+			}
+
+			&__arrow{
+				margin-left: 23px;
+			}
+			
+		}
+	}
 }
+
+.faq__container {
+    // Styl kontenera
+}
+
+.faq-content {
+    // Styl zawartości
+    display: none;
+
+    &.active-content {
+        // Styl dla aktywnej zawartości
+        display: block;
+    }
+}
+
 
 
 
