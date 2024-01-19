@@ -575,4 +575,26 @@ a {
     max-width: 1205px;
     padding: 100px 0px;
   }
+}
+.faq {
+  background-color: #26bbe1;
+}
+.faq__h2 {
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 40px;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .faq {
+    display: flex;
+    justify-content: center;
+  }
+  .faq__h2 {
+    margin-top: 33px;
+    font-size: 64px;
+    line-height: 60px;
+    text-align: center;
+  }
 }/*# sourceMappingURL=main.css.map */

@@ -2,271 +2,30 @@
 @import './assets/styles/reset.scss';
 @import './assets/styles/mixins.scss';
 @import './assets/styles/sections/hero-section.scss';
+@import './assets/styles/sections/offers-section.scss';
 
-.container {
-	padding: 100px 35px;
-	width: 100%;
-}
+.faq{
+	background-color: $background-blue;
 
-.job-offers {
-	display: flex;
-	justify-content: center;
-
-	&__top {
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
-	}
-
-	&__h2 {
+	&__h2{
 		@include h2-style;
-		text-align: center;
-	}
-
-	&__description {
-		font-size: $font-size-largeS;
-		text-align: center;
-		margin: 0 auto;
-		margin-top: 40px;
-		width: 250px;
-		font-weight: 700;
-		line-height: 30px;
-	}
-
-	&__right {
-		display: flex;
-		align-items: end;
-
-		&--event {
-			display: flex;
-			cursor: pointer;
-			width: 100%;
-			justify-content: center;
-			flex-direction: column-reverse;
-			margin-top: 50px;
-		}
-	}
-
-	&__arrow {
-		position: relative;
-		align-self: flex-start;
-		margin-top: -20px;
-		width: 60px;
-		display: none;
-		justify-content: center;
-	}
-
-	&__icon {
-		filter: brightness(0);
-		width: 29px;
-		height: 29px;
-		position: relative;
-		top: 0;
-		transition: top 0.1s ease-in-out;
-	}
-
-	&__line {
-		height: 20px;
-		background-color: black;
-		transition: top 0.2s ease-in-out;
-		width: 4px;
-		top: 0;
-		position: absolute;
-	}
-
-	&__link {
-		font-size: $font-size-large;
-		text-align: center;
-		font-weight: 700;
-		line-height: 30px;
-		display: block;
-		transition: color 0.3s ease-in-out;
-		width: 140px;
-		margin: 0 auto;
-	}
-	&__link:hover {
-		color: black;
-	}
-	&__link:active {
-		color: $color-secondary;
-	}
-	&__link:visited {
-		color: black;
+		color: $background-color_1;
 	}
 }
 
-.job-offers__list {
-	margin: 0 auto;
-	margin-top: 130px;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	max-width: 1205px;
-	gap: 28px;
-}
 
-.job-offer {
-	max-width: 383px;
-	display: flex;
-	flex-direction: column;
-	padding: 30px 42px;
-	border: 1px solid $hover-color;
-	transition: 0.3s ease-in-out;
 
-	&__top {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
-		margin-bottom: 10px;
-	}
-
-	&__title {
-		font-size: $font-size-h3;
-		font-weight: 700;
-	}
-
-	&__rate {
-		font-size: $font-size-rate;
-		line-height: 46px;
-		font-weight: 700;
-		text-align: right;
-		color: #007895;
-	}
-
-	&__company-location {
-		font-size: $font-size-small;
-		line-height: 18px;
-	}
-
-	&__description-title {
-		@include h4-style;
-		margin-top: 25px;
-		margin-bottom: 5px;
-		text-transform: uppercase;
-	}
-
-	&__description-text {
-		font-size: 14px;
-		line-height: 20px;
-		text-align: justify;
-	}
-
-	&__bottom {
-		display: flex;
-		justify-content: end;
-		margin-top: 20px;
-	}
-
-	&__link {
-		display: flex;
-		justify-content: end;
-		margin-top: 20px;
-		font-size: 22px;
-		font-weight: 700;
-		text-align: right;
-		text-transform: uppercase;
-	}
-
-	&__icon {
-		margin-left: 13px;
-	}
-}
-
-.job-offer:hover {
-	background-color: $hover-color;
-	border-radius: 50px;
-}
-
-/* MEDIA */
-
-@media (min-width: 568px) {
-	.job-offers {
-		&__top {
-			flex-direction: row;
-		}
-
-		&__h2 {
-			text-align: left;
-		}
-
-		&__description {
-			text-align: left;
-			margin: 40px 0 0 0;
-		}
-
-		&__right {
-			align-items: end;
-
-			&--event {
-				flex-direction: row;
-				margin-top: 0;
-			}
-		}
-
-		&__link {
-			text-align: left;
-		}
-
-		&__arrow {
-			display: flex;
-		}
-	}
-}
-
-@media (min-width: 450px) {
-	.job-offer__top {
-		margin-bottom: 0;
-	}
-}
-
-@media (min-width: 650px) {
-	.container {
-		padding: 100px 50px;
-	}
-}
 
 @media (min-width: 768px) {
-	.job-offers {
+	.faq{
+		display: flex;
+		justify-content: center;
+
 		&__h2 {
+			margin-top: 33px;
 			font-size: 64px;
 			line-height: 60px;
+			text-align: center;
 		}
-
-		&__description {
-			font-size: $font-size-large;
-			font-weight: 700;
-			line-height: 30px;
-		}
-	}
-}
-
-@media (min-width: 900px) {
-	.job-offers {
-		&__top {
-			justify-content: space-around;
-		}
-
-		&__description {
-			width: 100%;
-		}
-	}
-}
-
-@media (min-width: 1000px) {
-	.container {
-		padding: 100px 75px;
-	}
-}
-
-@media (min-width: 1200px) {
-	.container {
-		padding: 100px 25px;
-	}
-}
-
-@media (min-width: 1300px) {
-	.container {
-		max-width: 1205px;
-		padding: 100px 0px;
 	}
 }
