@@ -10,6 +10,7 @@ class FAQManager {
         if (this.faqSwitchers.length && this.faqContents.length) {
             this.faqSwitchers.forEach((switcher) => {
                 switcher.addEventListener('click', (event) => this.handleSwitcherClick(event, switcher));
+                switcher.addEventListener('touchstart', (event) => this.handleSwitcherClick(event, switcher));
             });
         }
     }
