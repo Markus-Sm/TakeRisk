@@ -578,12 +578,48 @@ a {
 }
 .faq {
   background-color: #26bbe1;
+  padding-bottom: 400px;
 }
 .faq__h2 {
   font-weight: 700;
   font-size: 44px;
   line-height: 40px;
   color: #fff;
+}
+.faq__switchers {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  margin-top: 70px;
+  max-width: 670px;
+}
+.faq__switchers .faq-switcher {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 24px;
+  width: 195px;
+}
+.faq__switchers .faq-switcher--employer {
+  color: #D1E85A;
+}
+.faq__switchers .faq-switcher.active-switcher {
+  font-weight: bold;
+  color: #fff;
+  filter: brightness(0) invert(1);
+  transition: 0.2s ease-in-out;
+}
+.faq__switchers .faq-switcher__arrow {
+  margin-left: 23px;
+}
+
+.faq-content {
+  display: none;
+}
+.faq-content.active-content {
+  display: block;
 }
 
 @media (min-width: 768px) {
