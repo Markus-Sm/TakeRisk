@@ -339,6 +339,7 @@ a {
 .container {
   padding: 100px 35px;
   width: 100%;
+  overflow: hidden;
 }
 
 .job-offers {
@@ -640,6 +641,7 @@ a {
   max-width: 561px;
   border: 1px solid #fff;
   padding: 15px 25px;
+  margin-bottom: 0;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -730,7 +732,6 @@ a {
   }
   .faq__content {
     flex-direction: row;
-    justify-content: space-between;
     align-items: start;
     gap: 88px;
   }
