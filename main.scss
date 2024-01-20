@@ -7,8 +7,6 @@
 .faq {
 	background-color: $background-blue;
 
-	padding-bottom: 50px;
-
 	&__h2 {
 		@include h2-style;
 		color: $background-color_1;
