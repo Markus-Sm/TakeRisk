@@ -630,14 +630,19 @@ a {
   margin-top: 105px;
 }
 .faq__content {
-  /* display: none; */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 12px;
+  display: none;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 88px;
 }
 .faq__content.active-content {
   display: flex;
+}
+.faq__content-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
 }
 .faq__rec {
   display: flex;
@@ -699,6 +704,9 @@ a {
   transform: rotate(0);
   filter: none;
 }
+.faq__text {
+  margin-bottom: 10px;
+}
 
 @media (min-width: 450px) {
   .faq__switcher {
@@ -711,7 +719,7 @@ a {
 }
 @media (min-width: 500px) {
   .faq__rec {
-    padding: 15px 45px;
+    padding: 14px 45px;
   }
   .faq__rec.active {
     padding: 45px 45px;
