@@ -570,7 +570,8 @@ a {
 }
 .faq {
   background-color: #26bbe1;
-  /* Questions & Answers */
+  padding-bottom: 44px;
+  /* two columns of accordions  */
 }
 .faq__h2 {
   font-weight: 700;
