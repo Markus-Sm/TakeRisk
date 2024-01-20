@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-
     <title>JWG - technical task</title>
     <link rel="stylesheet" href="https://use.typekit.net/esg5xus.css">
     <link rel="stylesheet" href="main.css">
@@ -250,24 +248,65 @@
                 </header>
 
                 <div class="faq__switchers">
-                    <a href="#" class="faq-switcher active-switcher" data-target="employer">
+                    <a href="#" class="faq__switcher active-switcher" data-target="employer">
                         <p>Pytania pracodawców</p>
-                        <img class="faq-switcher__arrow active-arrow" src="./assets/icons/green-arrow.svg" alt="ikonka strzałki">
+                        <img class="faq__arrow active-arrow" src="./assets/icons/switch-icon.svg" alt="ikonka strzałki">
                     </a>
-                    <a href="#" class="faq-switcher" data-target="employee">
+                    <a href="#" class="faq__switcher" data-target="employee">
                         <p>Pytania pracowników</p>
-                        <img class="faq-switcher__arrow" src="./assets/icons/green-arrow.svg" alt="ikonka strzałki">
+                        <img class="faq__arrow" src="./assets/icons/switch-icon.svg" alt="ikonka strzałki">
                     </a>
                 </div>
+                
                 <div class="faq__container">
-                    <div class="faq-content active-content" id="employer">
-                        <!-- Zawartość pytań dla pracodawców -->
-                        <p>Tutaj znajdziesz pytania pracodawców...</p>
+                    <div class="faq__content active-content" id="employer">
+
+                        <div class="faq__rec" aria-expanded="false">
+                            <div class="faq__rec-inner">
+                                <h3 class="faq__question">Lorem ipsum, dolor sit amet consectetur adipisicing?</h3>
+                                
+                                <div class="faq__answer" aria-hidden="true">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.
+                                    Doloremque tenetur numquam dicta? Quis deserunt accusantium
+                                    dolor impedit quidem laboriosam eaque! Lorem ipsum dolor sit amet consectetur.
+                                </div>
+                            </div>
+                        
+                            <img class="faq__toggle" src="./assets/icons/accordion-arrow.svg" alt="arrow icon">
+                        </div>
+
+                        <div class="faq__rec" aria-expanded="false">
+                            <div class="faq__rec-inner">
+                                <h3 class="faq__question">Lorem ipsum, dolor sit amet consectetur adipisicing?</h3>
+                                
+                                <div class="faq__answer" aria-hidden="true">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.
+                                    Doloremque tenetur numquam dicta? Quis deserunt accusantium
+                                    dolor impedit quidem laboriosam eaque! Lorem ipsum dolor sit amet consectetur.
+                                </div>
+                            </div>
+                        
+                            <img class="faq__toggle" src="./assets/icons/accordion-arrow.svg" alt="arrow icon">
+                        </div>
+
+                        <div class="faq__rec" aria-expanded="false">
+                            <div class="faq__rec-inner">
+                                <h3 class="faq__question">Lorem ipsum, dolor sit amet consectetur adipisicing?</h3>
+                                
+                                <div class="faq__answer" aria-hidden="true">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur.
+                                    Doloremque tenetur numquam dicta? Quis deserunt accusantium
+                                    dolor impedit quidem laboriosam eaque! Lorem ipsum dolor sit amet consectetur.
+                                </div>
+                            </div>
+                        
+                            <img class="faq__toggle" src="./assets/icons/accordion-arrow.svg" alt="arrow icon">
+                        </div>
                     </div>
-                    <div class="faq-content" id="employee">
-                        <!-- Zawartość pytań dla pracowników -->
+
+                    <!-- <div class="faq__content" id="employee">
                         <p>Tutaj znajdziesz pytania pracowników...</p>
-                    </div>
+                    </div> -->
                 </div>
 
             </div>
