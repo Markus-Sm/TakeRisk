@@ -57,14 +57,14 @@ a {
   display: flex;
   margin-left: 0px;
 }
-.hero__nav li a {
+.hero__link {
   color: #944385;
   margin-left: 27px;
   font-size: 14px;
   font-weight: 500;
   transition: color 0.3s ease-in-out;
 }
-.hero__nav li a:hover {
+.hero__link:hover {
   color: #fff;
 }
 .hero__mobile-menu {
@@ -339,6 +339,7 @@ a {
 .container {
   padding: 100px 35px;
   width: 100%;
+  overflow: hidden;
 }
 
 .job-offers {
@@ -398,6 +399,7 @@ a {
   background-color: black;
   transition: top 0.2s ease-in-out;
   width: 4px;
+  margin-left: -1px;
   top: 0;
   position: absolute;
 }
@@ -472,6 +474,7 @@ a {
   font-size: 14px;
   line-height: 20px;
   text-align: justify;
+  margin-bottom: 10px;
 }
 .job-offer__bottom {
   display: flex;
@@ -481,7 +484,7 @@ a {
 .job-offer__link {
   display: flex;
   justify-content: end;
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 22px;
   font-weight: 700;
   text-align: right;
@@ -569,8 +572,8 @@ a {
 }
 .faq {
   background-color: #26bbe1;
-  padding-bottom: 50px;
-  /* Questions & Answers */
+  padding-bottom: 44px;
+  /* two columns of accordions  */
 }
 .faq__h2 {
   font-weight: 700;
@@ -625,12 +628,12 @@ a {
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 0px;
+  gap: 12px;
 }
 .faq__content.active-content {
   display: flex;
 }
-.faq__content-inner {
+.faq__column {
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -640,7 +643,8 @@ a {
   align-items: center;
   max-width: 561px;
   border: 1px solid #fff;
-  padding: 15px 25px;
+  padding: 14px 25px;
+  margin-bottom: 0;
   position: relative;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
@@ -731,7 +735,6 @@ a {
   }
   .faq__content {
     flex-direction: row;
-    justify-content: space-between;
     align-items: start;
     gap: 88px;
   }

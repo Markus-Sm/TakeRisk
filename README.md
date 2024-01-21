@@ -1,1 +1,1 @@
-# TakeRisk
+# Technical task

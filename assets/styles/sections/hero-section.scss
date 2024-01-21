@@ -21,25 +21,25 @@
 		}
 	}
 
-    &__logo{
-        width: 133px;
-        height: 32px;
-    }
+	&__logo {
+		width: 133px;
+		height: 32px;
+	}
 
 	/* desktop nav */
 	&__nav {
 		display: flex;
 		margin-left: 0px;
+	}
 
-		li a {
-			color: $color-secondary;
-			margin-left: 27px;
-			font-size: 14px;
-			font-weight: 500;
-			transition: color 0.3s ease-in-out;
-		}
+	&__link {
+		color: $color-secondary;
+		margin-left: 27px;
+		font-size: 14px;
+		font-weight: 500;
+		transition: color 0.3s ease-in-out;
 
-		li a:hover {
+		&:hover {
 			color: $background-color_1;
 		}
 	}
@@ -131,18 +131,18 @@
 		margin-right: 17px;
 	}
 
-	&__socialmedia-icon{
-	    position: absolute;
+	&__socialmedia-icon {
+		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		filter: brightness(0) invert(1);
 
-	    &:hover{
-	        filter: none;
-	    }
+		&:hover {
+			filter: none;
+		}
 
-        &:hover img {
+		&:hover img {
 			filter: none;
 		}
 	}
