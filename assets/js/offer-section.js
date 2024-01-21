@@ -10,6 +10,7 @@ class JobOffersAnimation {
 
 		this.jobOffersRight.addEventListener('mouseenter', this.handleMouseEnter)
 		this.jobOffersRight.addEventListener('mouseleave', this.handleMouseLeave)
+		this.jobOffersRight.addEventListener('touchstart', this.handleMouseLeave)
 	}
 
 	handleMouseEnter() {
@@ -20,7 +21,7 @@ class JobOffersAnimation {
 		this.arrowIcon.style.filter = 'none'
 		this.arrowIcon.style.top = '48px'
 
-		this.offerLink.style.color = 'purple'
+		this.offerLink.style.color = '#944385'
 	}
 
 	handleMouseLeave() {
@@ -35,10 +36,6 @@ class JobOffersAnimation {
 	}
 }
 
-
 document.addEventListener('DOMContentLoaded', function () {
 	const jobOffersAnimation = new JobOffersAnimation()
 })
-
-
-
