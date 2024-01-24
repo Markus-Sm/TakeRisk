@@ -2,9 +2,8 @@
 	background-color: $background-blue;
 	padding-bottom: 44px;
 
-	&__h2 {
-		@include h2-style;
-		color: $background-color_1;
+	.section-title {
+		color: #fff;
 		text-align: center;
 	}
 
@@ -146,8 +145,8 @@
 		filter: none;
 	}
 
-	&__text {
-		margin-bottom: 10px;
+	.text {
+		line-height: 18px;
 	}
 }
 
@@ -166,11 +165,8 @@
 
 @media (min-width: 650px) {
 	.faq {
-		&__h2 {
-			margin-top: 33px;
-			font-size: 64px;
-			line-height: 60px;
-			text-align: center;
+		.container {
+			padding-top: 133px;
 		}
 
 		&__switcher {
@@ -194,16 +190,8 @@
 
 		&__content {
 			flex-direction: row;
-
 			align-items: start;
 			gap: 88px;
-		}
-
-		&__h2 {
-			margin-top: 33px;
-			font-size: 64px;
-			line-height: 60px;
-			text-align: center;
 		}
 
 		&__switcher {
