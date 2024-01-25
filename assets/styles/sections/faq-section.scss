@@ -49,17 +49,13 @@
 			transform: rotate(0deg);
 		}
 	}
+}
 
-	/* two columns of accordions  */
+/* ===  accordions === */
 
-	&__container {
-		display: flex;
-		justify-content: center;
-	}
-
-	.text {
-		line-height: 18px;
-	}
+.accordeon{
+	display: flex;
+	justify-content: center;
 }
 
 .content {
@@ -152,6 +148,10 @@
 		max-height: 0;
 		visibility: hidden;
 		transition: max-height 0.3s ease-out;
+	}
+
+	.text {
+		line-height: 18px;
 	}
 }
 
