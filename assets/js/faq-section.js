@@ -1,6 +1,6 @@
 class FAQManager {
     constructor() {
-        this.faqSwitchers = document.querySelectorAll('.faq__switcher');
+        this.faqSwitchers = document.querySelectorAll('.switcher');
         this.faqContents = document.querySelectorAll('.faq__content');
         this.accordions = document.querySelectorAll('.faq__rec');
 
@@ -38,14 +38,14 @@ class FAQManager {
 
         this.faqSwitchers.forEach((switcher) => {
             switcher.classList.remove('active-switcher');
-            const arrowIcon = switcher.querySelector('.faq__arrow');
+            const arrowIcon = switcher.querySelector('.switcher__arrow');
             if (arrowIcon) {
                 arrowIcon.classList.remove('active-arrow');
             }
         });
 
         clickedSwitcher.classList.add('active-switcher');
-        const arrowIcon = clickedSwitcher.querySelector('.faq__arrow');
+        const arrowIcon = clickedSwitcher.querySelector('.switcher__arrow');
         if (arrowIcon) {
             arrowIcon.classList.add('active-arrow');
         }

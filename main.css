@@ -135,7 +135,7 @@ a {
   bottom: 56px;
   right: 65px;
 }
-.hero__socialmedia-link {
+.hero .media {
   background-color: #944385;
   border-radius: 100%;
   width: 26px;
@@ -144,17 +144,26 @@ a {
   position: relative;
   margin-right: 17px;
 }
-.hero__socialmedia-icon {
+.hero .media__icon {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   filter: brightness(0) invert(1);
+  background-size: cover;
+  width: 13px;
+  height: 13px;
 }
-.hero__socialmedia-icon:hover {
+.hero .media__icon--fb {
+  background-image: url("./assets/icons/fb.svg");
+}
+.hero .media__icon--inst {
+  background-image: url("./assets/icons/inst.svg");
+}
+.hero .media__icon:hover {
   filter: none;
 }
-.hero__socialmedia-icon:hover img {
+.hero .media__icon:hover img {
   filter: none;
 }
 .hero__image {
@@ -592,15 +601,16 @@ a {
 .faq .section-title {
   color: #fff;
   text-align: center;
+  margin-bottom: 70px;
 }
-.faq__switchers {
+.faq .switchers {
   display: flex;
   justify-content: space-around;
   margin: 0 auto;
-  margin-top: 70px;
+  margin-bottom: 105px;
   max-width: 670px;
 }
-.faq__switcher {
+.faq .switcher {
   display: flex;
   justify-content: center;
   cursor: pointer;
@@ -610,14 +620,14 @@ a {
   width: 125px;
   transition: filter 0.3s ease-in-out;
 }
-.faq__switcher:hover {
+.faq .switcher:hover {
   filter: brightness(0) invert(1);
   transition: filter 0.3s ease-in-out;
 }
-.faq__switcher.active-switcher {
+.faq .switcher.active-switcher {
   color: #d1e85a;
 }
-.faq__arrow {
+.faq .switcher__arrow {
   margin-left: 13px;
   filter: brightness(0);
   transform: rotate(180deg);
@@ -625,14 +635,13 @@ a {
   width: 28px;
   height: 28px;
 }
-.faq__arrow.active-arrow {
+.faq .switcher__arrow.active-arrow {
   filter: none;
   transform: rotate(0deg);
 }
 .faq__container {
   display: flex;
   justify-content: center;
-  margin-top: 105px;
 }
 .faq__content {
   display: none;
@@ -677,6 +686,11 @@ a {
   filter: brightness(0) invert(1);
   transform: rotate(180deg);
   transition: all 0.3s ease-in-out;
+  background-image: url("./assets/icons/accordion-arrow.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 16px;
 }
 .faq__answer {
   text-align: justify;
@@ -715,25 +729,33 @@ a {
 }
 
 @media (min-width: 450px) {
-  .faq__switcher {
+  .faq .switcher {
     width: 145px;
     font-size: 18px;
   }
-  .faq__arrow {
+  .faq .switcher__arrow {
     margin-left: 13px;
+  }
+  .faq__toggle {
+    width: 25px;
+  }
+}
+@media (min-width: 550px) {
+  .faq__question {
+    max-width: 350px;
   }
 }
 @media (min-width: 650px) {
   .faq .container {
     padding-top: 133px;
   }
-  .faq__switcher {
+  .faq .switcher {
     font-size: 28px;
     line-height: 22px;
     display: flex;
     align-items: end;
   }
-  .faq__arrow {
+  .faq .switcher__arrow {
     width: 40px;
     height: 40px;
   }
@@ -748,13 +770,24 @@ a {
     align-items: start;
     gap: 88px;
   }
-  .faq__switcher {
+  .faq .switcher {
     width: 195px;
     font-size: 30px;
     line-height: 24px;
   }
-  .faq__arrow {
+  .faq .switcher__arrow {
     margin-left: 23px;
+  }
+  .faq__question {
+    max-width: 414px;
+  }
+  .faq__toggle {
+    width: 30px;
+  }
+}
+@media (min-width: 850px) {
+  .faq__toggle {
+    width: 25px;
   }
 }
 @media (min-width: 1200px) {

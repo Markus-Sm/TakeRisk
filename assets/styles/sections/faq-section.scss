@@ -5,17 +5,18 @@
 	.section-title {
 		color: #fff;
 		text-align: center;
+		margin-bottom: 70px;
 	}
 
-	&__switchers {
+	.switchers {
 		display: flex;
 		justify-content: space-around;
 		margin: 0 auto;
-		margin-top: 70px;
+		margin-bottom: 105px;
 		max-width: 670px;
 	}
 
-	&__switcher {
+	.switcher {
 		display: flex;
 		justify-content: center;
 		cursor: pointer;
@@ -33,20 +34,20 @@
 		&.active-switcher {
 			color: $hover-color;
 		}
-	}
 
-	&__arrow {
-		margin-left: 13px;
-		filter: brightness(0);
-		transform: rotate(180deg);
-		transition: transform 0.3s ease-in-out;
-		width: 28px;
-		height: 28px;
-	}
-
-	&__arrow.active-arrow {
-		filter: none;
-		transform: rotate(0deg);
+		&__arrow {
+			margin-left: 13px;
+			filter: brightness(0);
+			transform: rotate(180deg);
+			transition: transform 0.3s ease-in-out;
+			width: 28px;
+			height: 28px;
+		}
+	
+		&__arrow.active-arrow {
+			filter: none;
+			transform: rotate(0deg);
+		}
 	}
 
 	/* two columns of accordions  */
@@ -54,7 +55,6 @@
 	&__container {
 		display: flex;
 		justify-content: center;
-		margin-top: 105px;
 	}
 
 	&__content {
@@ -106,6 +106,11 @@
 		filter: brightness(0) invert(1);
 		transform: rotate(180deg);
 		transition: all 0.3s ease-in-out;
+		background-image: url('./assets/icons/accordion-arrow.svg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		width: 30px;
+		height: 16px;
 	}
 
 	&__answer {
@@ -152,14 +157,24 @@
 
 @media (min-width: 450px) {
 	.faq {
-		&__switcher {
+		.switcher {
 			width: 145px;
 			font-size: $font-size-largeXS;
+
+			&__arrow {
+				margin-left: 13px;
+			}
 		}
 
-		&__arrow {
-			margin-left: 13px;
+		&__toggle{
+			width: 25px;
 		}
+	}
+}
+
+@media (min-width: 550px){
+	.faq__question{
+		max-width: 350px;
 	}
 }
 
@@ -169,16 +184,16 @@
 			padding-top: 133px;
 		}
 
-		&__switcher {
+		.switcher {
 			font-size: $font-size-largeS;
 			line-height: 22px;
 			display: flex;
 			align-items: end;
-		}
 
-		&__arrow {
-			width: 40px;
-			height: 40px;
+			&__arrow {
+				width: 40px;
+				height: 40px;
+			}
 		}
 	}
 }
@@ -194,15 +209,29 @@
 			gap: 88px;
 		}
 
-		&__switcher {
+		.switcher {
 			width: 195px;
 			font-size: $font-size-large;
 			line-height: 24px;
+
+			&__arrow {
+				margin-left: 23px;
+			}
 		}
 
-		&__arrow {
-			margin-left: 23px;
+		&__question{
+			max-width: 414px;
 		}
+
+		&__toggle{
+			width: 30px;
+		}
+	}
+}
+
+@media (min-width: 850px){
+	.faq__toggle{
+		width: 25px;
 	}
 }
 
