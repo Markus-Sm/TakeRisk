@@ -1,15 +1,15 @@
 class FAQManager {
     constructor() {
-        this.faqSwitchers = document.querySelectorAll('.switcher');
-        this.faqContents = document.querySelectorAll('.content');
-        this.accordions = document.querySelectorAll('.content__rec');
+        this.contentSwitchers = document.querySelectorAll('.switcher');
+        this.accordeonContents = document.querySelectorAll('.accordeon__content');
+        this.accordions = document.querySelectorAll('.accordeon__rec');
 
         this.init();
     }
 
     init() {
-        if (this.faqSwitchers.length && this.faqContents.length) {
-            this.faqSwitchers.forEach((switcher) => {
+        if (this.contentSwitchers.length && this.accordeonContents.length) {
+            this.contentSwitchers.forEach((switcher) => {
                 switcher.addEventListener('click', (event) => this.handleSwitcherClick(event, switcher));
                 switcher.addEventListener('touchstart', (event) => this.handleSwitcherClick(event, switcher));
             });
@@ -27,7 +27,7 @@ class FAQManager {
 
         const targetId = clickedSwitcher.getAttribute('data-target');
 
-        this.faqContents.forEach((content) => {
+        this.accordeonContents.forEach((content) => {
             content.classList.remove('active-content');
         });
 
@@ -36,7 +36,7 @@ class FAQManager {
             targetContent.classList.add('active-content');
         }
 
-        this.faqSwitchers.forEach((switcher) => {
+        this.contentSwitchers.forEach((switcher) => {
             switcher.classList.remove('switcher--active');
             const arrowIcon = switcher.querySelector('.switcher__arrow');
             if (arrowIcon) {
@@ -56,7 +56,7 @@ class FAQManager {
             if (item !== clickedAccordion) {
                 item.classList.remove('active');
                 item.setAttribute('aria-expanded', 'false');
-                const answer = item.querySelector('.content__expand');
+                const answer = item.querySelector('.accordeon__expand');
                 answer.setAttribute('aria-hidden', 'true');
             }
         });
@@ -64,7 +64,7 @@ class FAQManager {
         clickedAccordion.classList.toggle('active');
         const isExpanded = clickedAccordion.classList.contains('active');
         clickedAccordion.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-        const answer = clickedAccordion.querySelector('.content__expand');
+        const answer = clickedAccordion.querySelector('.accordeon__expand');
         answer.setAttribute('aria-hidden', isExpanded ? 'false' : 'true');
     }
 }

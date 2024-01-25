@@ -56,25 +56,25 @@
 .accordeon{
 	display: flex;
 	justify-content: center;
-}
 
-.content {
-	display: none;
-	width: 100%;
-	flex-direction: column;
-	align-items: center;
-	gap: 12px;
+	&__content {
+		display: none;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		gap: 12px;
 
-	&.active-content {
-		display: flex;
+		&.active-content {
+			display: flex;
+		}
 	}
-
+	
 	&__column {
 		display: flex;
 		flex-direction: column;
 		gap: 12px;
 	}
-
+	
 	&__rec {
 		display: flex;
 		align-items: center;
@@ -86,12 +86,12 @@
 		cursor: pointer;
 		transition: all 0.3s ease-in-out;
 	}
-
+	
 	&__rec-inner {
 		display: flex;
 		flex-direction: column;
 	}
-
+	
 	&__rec.active {
 		background-color: $background-color_1;
 		padding: 30px 20px;
@@ -99,25 +99,25 @@
 		margin: 24px 0;
 		transition: all 0.3s ease-out;
 	}
-
+	
 	&__rec.active &__title {
 		color: #000;
 		transition: color 0.3s ease-out;
 		margin-bottom: 23px;
 	}
-
+	
 	&__rec.active &__expand {
 		max-height: 400px;
 		visibility: visible;
 		color: #000;
 		transition: all 1s ease-out;
 	}
-
+	
 	&__rec.active &__toggle {
 		transform: rotate(0);
 		filter: none;
 	}
-
+	
 	&__title {
 		max-width: 414px;
 		font-size: 16px;
@@ -126,7 +126,7 @@
 		color: $background-color_1;
 		transition: color 0.3s ease-in-out;
 	}
-
+	
 	&__toggle {
 		margin-left: 15px;
 		filter: brightness(0) invert(1);
@@ -138,7 +138,7 @@
 		width: 30px;
 		height: 16px;
 	}
-
+	
 	&__expand {
 		text-align: justify;
 		color: $background-color_1;
@@ -149,10 +149,11 @@
 		visibility: hidden;
 		transition: max-height 0.3s ease-out;
 	}
-
+	
 	.text {
 		line-height: 18px;
 	}
+	
 }
 
 @media (min-width: 450px) {
@@ -167,13 +168,13 @@
 		}
 	}
 
-	.content__toggle {
+	.accordeon__toggle {
 		width: 25px;
 	}
 }
 
 @media (min-width: 550px) {
-	.content__title {
+	.accordeon__title {
 		max-width: 350px;
 	}
 }
@@ -214,10 +215,13 @@
 		}
 	}
 
-	.content {
-		flex-direction: row;
-		align-items: start;
-		gap: 88px;
+	.accordeon{
+
+		&__content{
+			flex-direction: row;
+			align-items: start;
+			gap: 88px;
+		}
 
 		&__title {
 			max-width: 414px;
@@ -230,13 +234,13 @@
 }
 
 @media (min-width: 850px) {
-	.content__toggle {
+	.accordeon__toggle {
 		width: 25px;
 	}
 }
 
 @media (min-width: 1200px) {
-	.content {
+	.accordeon {
 		&__rec {
 			padding: 14px 45px;
 		}
