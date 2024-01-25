@@ -121,7 +121,7 @@
 		right: 65px;
 	}
 
-	&__socialmedia-link {
+	.media {
 		background-color: $color-secondary;
 		border-radius: 100%;
 		width: 26px;
@@ -131,12 +131,22 @@
 		margin-right: 17px;
 	}
 
-	&__socialmedia-icon {
+	.media__icon {
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		filter: brightness(0) invert(1);
+		background-size: cover;
+		width: 13px;
+		height: 13px;
+
+		&--fb {
+			background-image: url('./assets/icons/fb.svg');
+		}
+		&--inst{
+			background-image: url('./assets/icons/inst.svg');
+		}
 
 		&:hover {
 			filter: none;
@@ -333,8 +343,8 @@
 	}
 }
 
-@media (min-width: 1500px){
-	.hero__link{
+@media (min-width: 1500px) {
+	.hero__link {
 		font-size: 16px;
 	}
 }
