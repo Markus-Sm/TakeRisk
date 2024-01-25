@@ -1,8 +1,8 @@
 class FAQManager {
     constructor() {
         this.faqSwitchers = document.querySelectorAll('.switcher');
-        this.faqContents = document.querySelectorAll('.faq__content');
-        this.accordions = document.querySelectorAll('.faq__rec');
+        this.faqContents = document.querySelectorAll('.content');
+        this.accordions = document.querySelectorAll('.content__rec');
 
         this.init();
     }
@@ -37,14 +37,14 @@ class FAQManager {
         }
 
         this.faqSwitchers.forEach((switcher) => {
-            switcher.classList.remove('active-switcher');
+            switcher.classList.remove('switcher--active');
             const arrowIcon = switcher.querySelector('.switcher__arrow');
             if (arrowIcon) {
                 arrowIcon.classList.remove('active-arrow');
             }
         });
 
-        clickedSwitcher.classList.add('active-switcher');
+        clickedSwitcher.classList.add('switcher--active');
         const arrowIcon = clickedSwitcher.querySelector('.switcher__arrow');
         if (arrowIcon) {
             arrowIcon.classList.add('active-arrow');
@@ -56,7 +56,7 @@ class FAQManager {
             if (item !== clickedAccordion) {
                 item.classList.remove('active');
                 item.setAttribute('aria-expanded', 'false');
-                const answer = item.querySelector('.faq__answer');
+                const answer = item.querySelector('.content__expand');
                 answer.setAttribute('aria-hidden', 'true');
             }
         });
@@ -64,7 +64,7 @@ class FAQManager {
         clickedAccordion.classList.toggle('active');
         const isExpanded = clickedAccordion.classList.contains('active');
         clickedAccordion.setAttribute('aria-expanded', isExpanded ? 'true' : 'false');
-        const answer = clickedAccordion.querySelector('.faq__answer');
+        const answer = clickedAccordion.querySelector('.content__expand');
         answer.setAttribute('aria-hidden', isExpanded ? 'false' : 'true');
     }
 }
