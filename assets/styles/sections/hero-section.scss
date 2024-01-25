@@ -119,7 +119,7 @@
 	&__media {
 		position: absolute;
 		bottom: 56px;
-		right: 65px;
+		right: 20px;
 	}
 
 	.media {
@@ -287,6 +287,10 @@
 			}
 			display: flex;
 			flex: 1 1 100%;
+		}
+
+		&__media{
+			right: 65px;
 		}
 	}
 }

@@ -128,7 +128,7 @@ a {
 .hero__media {
   position: absolute;
   bottom: 56px;
-  right: 65px;
+  right: 20px;
 }
 .hero .media {
   background-color: #944385;
@@ -306,6 +306,9 @@ a {
   }
   .hero__column--third {
     display: none;
+  }
+  .hero__media {
+    right: 65px;
   }
 }
 @media (min-width: 800px) {
@@ -559,6 +562,11 @@ a {
 }
 
 /* MEDIA */
+@media (min-width: 450px) {
+  .job-offer__top {
+    margin-bottom: 0;
+  }
+}
 @media (min-width: 568px) {
   .job-offers__top {
     flex-direction: row;
@@ -583,11 +591,6 @@ a {
   }
   .job-offers__arrow {
     display: flex;
-  }
-}
-@media (min-width: 450px) {
-  .job-offer__top {
-    margin-bottom: 0;
   }
 }
 @media (min-width: 650px) {
