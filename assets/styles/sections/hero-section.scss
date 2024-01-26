@@ -60,9 +60,6 @@
 		display: flex;
 		flex-direction: column;
 		flex: 1 1 100%;
-		// flex: 1;
-		// flex-basis: 0;
-		// margin-right: -2px;
 		background-color: $background-pink;
 		position: relative;
 
@@ -119,7 +116,7 @@
 	&__media {
 		position: absolute;
 		bottom: 56px;
-		right: 65px;
+		right: 20px;
 	}
 
 	.media {
@@ -273,38 +270,42 @@
 	}
 }
 
-@media (min-width: 450px) {
+@media (min-width: 500px) {
 	.hero {
-		margin-bottom: 0;
-
+		margin-bottom: 1205px;
 		&__column {
+			&--third {
+				display: block;
+				min-height: 600px;
+			}
 			&--second {
 				display: none;
+				display: block;
+				max-height: 600px;
 			}
-
-			&--third {
-				display: none;
-			}
-			display: flex;
-			flex: 1 1 100%;
 		}
 	}
 }
 
 @media (min-width: 800px) {
 	.hero {
+		margin-bottom: 0;
 		flex-direction: row;
 
 		&__column {
 			flex: 1;
 			flex-basis: 0;
-			margin-left: -2;
+			margin-left: -2px;
 			background-color: $background-pink;
 			position: relative;
 
 			&--second {
 				display: block;
 				max-height: 100%;
+			}
+
+			&--third{
+				display: none;
 			}
 		}
 

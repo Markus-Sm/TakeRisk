@@ -183,6 +183,12 @@
 
 /* MEDIA */
 
+@media (min-width: 450px) {
+	.job-offer__top {
+		margin-bottom: 0;
+	}
+}
+
 @media (min-width: 568px) {
 	.job-offers {
 		&__top {
@@ -215,12 +221,6 @@
 		&__arrow {
 			display: flex;
 		}
-	}
-}
-
-@media (min-width: 450px) {
-	.job-offer__top {
-		margin-bottom: 0;
 	}
 }
 
